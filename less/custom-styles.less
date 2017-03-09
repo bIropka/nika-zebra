@@ -149,6 +149,8 @@ header[role="banner"] {
   right: 0;
   top: 0;
   padding: 30px 0 50px;
+  background: #fff;
+  z-index: 1001;
 
   .wrapper-inner {
     display: flex;
@@ -513,12 +515,23 @@ footer[role="contentinfo"] {
       -o-transition: .4s;
       transition: .4s;
 
+      &:hover {
+        -webkit-box-shadow: 0 0 0 3px @color-red;
+        -moz-box-shadow: 0 0 0 3px @color-red;
+        box-shadow: 0 0 0 3px @color-red;
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
+
       &:active {
-        -webkit-transform: scale(.95);
-        -moz-transform: scale(.95);
-        -ms-transform: scale(.95);
-        -o-transform: scale(.95);
-        transform: scale(.95);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+        transform: translateY(-5px);
       }
 
     }
@@ -533,21 +546,6 @@ footer[role="contentinfo"] {
 
     &:nth-child(3) .fa {
       color: #db2622;
-    }
-
-    &:nth-child(1) .fa:hover {
-      color: #fff;
-      background: #254887;
-    }
-
-    &:nth-child(2) .fa:hover {
-      color: #fff;
-      background: #5075a5;
-    }
-
-    &:nth-child(3) .fa:hover {
-      color: #fff;
-      background: #db2622;
     }
 
   }
@@ -574,6 +572,7 @@ footer[role="contentinfo"] {
     text-decoration: underline;
 
     &:hover {
+      color: #fff;
       text-decoration: none;
     }
 
@@ -590,6 +589,7 @@ footer[role="contentinfo"] {
 
     &:hover {
       text-decoration: none;
+      color: #fff;
     }
 
   }
@@ -621,6 +621,137 @@ footer[role="contentinfo"] {
   .footer-links {
     width: 100%;
     margin: 10px 0;
+  }
+
+}
+
+/**********************************************************************************************************************
+********** top-block
+***********************************************************************************************************************/
+
+.top-block {
+  background: url(../source/images/background-top.png) no-repeat center top;
+
+  .wrapper-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      display: none;
+    }
+
+  }
+
+  .woman {
+    width: 534px;
+    margin-left: -115px;
+    margin-right: -75px;
+  }
+
+  .promo {
+    width: 400px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 67px;
+      height: 46px;
+      background: url(../source/images/quotes.png) no-repeat;
+      position: absolute;
+      left: -90px;
+      top: 10px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 110px;
+      height: 406px;
+      background: url(../source/images/bracket.png) no-repeat;
+      position: absolute;
+      right: -145px;
+      top: -55px;
+    }
+
+    blockquote {
+      font-family: Georgia, sans-serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.7;
+    }
+
+    .to-cases {
+      display: block;
+      width: 275px;
+      height: 57px;
+      background: @color-red;
+      font-family: "Calibri Bold", sans-serif;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 57px;
+      text-align: center;
+      margin-top: 30px;
+
+      &:hover {
+        background: #fff;
+      }
+
+      &:active {
+        line-height: 62px;
+      }
+
+      .fa {
+        color: inherit;
+        font-size: 24px;
+        margin-right: 10px;
+        position: relative;
+        top: 3px;
+      }
+
+    }
+
+  }
+
+  ul {
+
+    li {
+      display: block;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 0 20px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 52px;
+        height: 52px;
+        background: url(../source/images/sprite-1.png) no-repeat 0 0;
+        margin: 0 auto 10px;
+      }
+
+      &:nth-child(2):before {
+        background-position: 0 -52px;
+      }
+
+      &:nth-child(3):before {
+        background-position: 0 -104px;
+      }
+
+      &:nth-child(4):before {
+        background-position: 0 -156px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+
+    }
+
   }
 
 }

@@ -139,6 +139,8 @@ header[role="banner"] {
   right: 0;
   top: 0;
   padding: 30px 0 50px;
+  background: #fff;
+  z-index: 1001;
 }
 header[role="banner"] .wrapper-inner {
   display: flex;
@@ -448,12 +450,22 @@ footer[role="contentinfo"] .wrapper-inner:after {
   -o-transition: .4s;
   transition: .4s;
 }
+.social-links li .fa:hover {
+  -webkit-box-shadow: 0 0 0 3px #f2134b;
+  -moz-box-shadow: 0 0 0 3px #f2134b;
+  box-shadow: 0 0 0 3px #f2134b;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
 .social-links li .fa:active {
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  transform: scale(0.95);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .social-links li:nth-child(1) .fa {
   color: #254887;
@@ -463,18 +475,6 @@ footer[role="contentinfo"] .wrapper-inner:after {
 }
 .social-links li:nth-child(3) .fa {
   color: #db2622;
-}
-.social-links li:nth-child(1) .fa:hover {
-  color: #fff;
-  background: #254887;
-}
-.social-links li:nth-child(2) .fa:hover {
-  color: #fff;
-  background: #5075a5;
-}
-.social-links li:nth-child(3) .fa:hover {
-  color: #fff;
-  background: #db2622;
 }
 .questions span {
   display: block;
@@ -491,6 +491,7 @@ footer[role="contentinfo"] .wrapper-inner:after {
   text-decoration: underline;
 }
 .questions a:hover {
+  color: #fff;
   text-decoration: none;
 }
 .footer-links a {
@@ -500,6 +501,7 @@ footer[role="contentinfo"] .wrapper-inner:after {
 }
 .footer-links a:hover {
   text-decoration: none;
+  color: #fff;
 }
 @media (max-width: 980px) {
   footer[role="contentinfo"] {
@@ -522,4 +524,107 @@ footer[role="contentinfo"] .wrapper-inner:after {
     width: 100%;
     margin: 10px 0;
   }
+}
+/**********************************************************************************************************************
+********** top-block
+***********************************************************************************************************************/
+.top-block {
+  background: url(../source/images/background-top.png) no-repeat center top;
+}
+.top-block .wrapper-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-block .wrapper-inner:after {
+  display: none;
+}
+.top-block .woman {
+  width: 534px;
+  margin-left: -115px;
+  margin-right: -75px;
+}
+.top-block .promo {
+  width: 400px;
+  position: relative;
+}
+.top-block .promo:before {
+  content: '';
+  display: block;
+  width: 67px;
+  height: 46px;
+  background: url(../source/images/quotes.png) no-repeat;
+  position: absolute;
+  left: -90px;
+  top: 10px;
+}
+.top-block .promo:after {
+  content: '';
+  display: block;
+  width: 110px;
+  height: 406px;
+  background: url(../source/images/bracket.png) no-repeat;
+  position: absolute;
+  right: -145px;
+  top: -55px;
+}
+.top-block .promo blockquote {
+  font-family: Georgia, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.7;
+}
+.top-block .promo .to-cases {
+  display: block;
+  width: 275px;
+  height: 57px;
+  background: #f2134b;
+  font-family: "Calibri Bold", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 57px;
+  text-align: center;
+  margin-top: 30px;
+}
+.top-block .promo .to-cases:hover {
+  background: #fff;
+}
+.top-block .promo .to-cases:active {
+  line-height: 62px;
+}
+.top-block .promo .to-cases .fa {
+  color: inherit;
+  font-size: 24px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+.top-block ul li {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.top-block ul li:before {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 52px;
+  background: url(../source/images/sprite-1.png) no-repeat 0 0;
+  margin: 0 auto 10px;
+}
+.top-block ul li:nth-child(2):before {
+  background-position: 0 -52px;
+}
+.top-block ul li:nth-child(3):before {
+  background-position: 0 -104px;
+}
+.top-block ul li:nth-child(4):before {
+  background-position: 0 -156px;
+}
+.top-block ul li:last-child {
+  margin: 0;
 }
