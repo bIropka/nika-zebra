@@ -41,4 +41,31 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('.slider-article').slick({
+        slidesToShow: 4,
+        appendArrows: '.article-control',
+        prevArrow: '.article-control-prev',
+        nextArrow: '.article-control-next',
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
 });
