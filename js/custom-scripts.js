@@ -19,6 +19,17 @@ $(document).ready(function() {
 
     });
 
+    $('.top-block ul li').click(function() {
+
+        if(!$(this).hasClass('active')) {
+            $(this).siblings('.active').removeClass('active');
+            $(this).addClass('active');
+            $(this).parents('.top-block').find('blockquote.active').fadeOut(0);
+            $(this).parents('.top-block').find('blockquote').eq($(this).index()).addClass('active').fadeIn();
+        }
+
+    });
+
     /******************************************************************************************************************
      ******* sliders scripts
      ******************************************************************************************************************/
