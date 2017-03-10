@@ -1691,6 +1691,23 @@ footer[role="contentinfo"] .wrapper-inner:after {
 /**********************************************************************************************************************
 ********** article
 ***********************************************************************************************************************/
+article {
+  margin-top: 30px;
+}
+article h1 {
+  display: block;
+  width: 100%;
+  color: #f2134b;
+  font-size: 2.333em;
+  text-align: left;
+  font-weight: 100;
+  line-height: 1;
+}
+@media (max-width: 480px) {
+  article h1 {
+    font-size: 1.8em;
+  }
+}
 article .article-header {
   display: flex;
   justify-content: flex-start;
@@ -1701,6 +1718,36 @@ article .article-header {
   background-size: cover;
   padding: 150px 0 170px 80px;
   margin-bottom: 45px;
+}
+article .article-header h1 {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 3.8em;
+  text-align: left;
+  font-weight: 100;
+  line-height: 1;
+}
+article .article-header h1 span {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: .44em;
+  line-height: 1;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  article .article-header h1 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  article .article-header h1 {
+    font-size: 2em;
+  }
+  article .article-header h1 span {
+    font-size: .6em;
+  }
 }
 @media (max-width: 768px) {
   article .article-header {
@@ -1731,36 +1778,6 @@ article .sub-title {
 @media (max-width: 480px) {
   article .sub-title {
     font-size: 1.3em;
-  }
-}
-article h1 {
-  display: block;
-  width: 100%;
-  color: #fff;
-  font-size: 3.8em;
-  text-align: left;
-  font-weight: 100;
-  line-height: 1;
-}
-article h1 span {
-  display: block;
-  width: 100%;
-  color: #fff;
-  font-size: .44em;
-  line-height: 1;
-  margin-top: 10px;
-}
-@media (max-width: 768px) {
-  article h1 {
-    font-size: 2.5em;
-  }
-}
-@media (max-width: 480px) {
-  article h1 {
-    font-size: 2em;
-  }
-  article h1 span {
-    font-size: .6em;
   }
 }
 article h2 {
@@ -1799,12 +1816,43 @@ article blockquote {
   display: block;
   border-left: 3px solid #f2134b;
   padding: 10px 30px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin: 30px 0;
 }
 @media (max-width: 480px) {
   article blockquote {
     font-size: 1.2em;
+  }
+}
+article .custom-blockquote {
+  border-left: none;
+  padding: 0 30px 0 110px;
+  position: relative;
+}
+article .custom-blockquote:before {
+  content: '';
+  display: block;
+  width: 76px;
+  height: 72px;
+  background: url(../source/images/icon-article.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 480px) {
+  article .custom-blockquote:before {
+    position: static;
+    float: left;
+    margin: 0 10px 0 0;
+    width: 57px;
+    height: 54px;
+    background: url(../source/images/icon-article.png) no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 480px) {
+  article .custom-blockquote {
+    padding: 0;
   }
 }
 article ul {
