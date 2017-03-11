@@ -1761,8 +1761,7 @@ article .article-header h1 span {
   }
 }
 article .sub-title {
-  display: block;
-  width: 100%;
+  display: inline-block;
   font-family: "Calibri Bold", sans-serif;
   font-size: 1.8em;
   text-decoration: underline;
@@ -1770,6 +1769,9 @@ article .sub-title {
   color: #f2134b;
   line-height: 1;
   margin-bottom: 15px;
+}
+article .sub-title:hover {
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   article .sub-title {
@@ -2071,6 +2073,10 @@ article .popular a {
 }
 article .popular a:hover {
   text-decoration: none;
+}
+article .social-widget {
+  max-width: 407px;
+  margin: 40px 0;
 }
 /**********************************************************************************************************************
 ********** blog-list

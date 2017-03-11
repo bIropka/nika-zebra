@@ -2037,8 +2037,7 @@ article {
   }
 
   .sub-title {
-    display: block;
-    width: 100%;
+    display: inline-block;
     font-family: "Calibri Bold", sans-serif;
     font-size: 1.8em;
     text-decoration: underline;
@@ -2046,6 +2045,10 @@ article {
     color: @color-red;
     line-height: 1;
     margin-bottom: 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     @media(max-width: 768px) {
       font-size: 1.5em;
@@ -2402,6 +2405,11 @@ article {
 
     }
 
+  }
+
+  .social-widget {
+    max-width: 407px;
+    margin: 40px 0;
   }
 
 }
