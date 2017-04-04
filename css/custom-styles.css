@@ -1731,7 +1731,7 @@ footer[role="contentinfo"] .wrapper-inner:after {
 .form-callback ul li:nth-child(2):before {
   background-position: 0 -40px;
 }
-.form-callback ul li:nth-child(2):before {
+.form-callback ul li:nth-child(3):before {
   background-position: 0 -80px;
 }
 @media (max-width: 1230px) {
